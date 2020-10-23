@@ -114,6 +114,14 @@
           "default": null,
           "description": "A path added to NODE_PATH when resolving the eslint module."
         },
+        "eslint.eslintBin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Name of eslint executable, default to eslint"
+        },
         "eslint.autoFix": {
           "type": "boolean",
           "default": true,

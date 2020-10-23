@@ -68,6 +68,7 @@ interface TextDocumentSettings {
   autoFixSkipRules: string[]
   quiet: boolean
   options: any | undefined
+  eslintBin: string | undefined
   nodePath: string | undefined
   run: RunValues
   workspaceFolder: WorkspaceFolder | undefined
@@ -234,6 +235,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
               autoFix: config.get('autoFix', false),
               autoFixOnSave: config.get('autoFixOnSave', false),
               autoFixSkipRules: config.get('autoFixSkipRules', []),
+              eslintBin: config.get('eslintBin', undefined),
               nodePath: config.get('nodePath', undefined),
               options: config.get<Object>('options', {}),
               run: config.get('run', 'onType'),

@@ -329,12 +329,14 @@ function resolveSettings(
         directory = settings.workspaceFolder ? URI.parse(settings.workspaceFolder.uri).fsPath : undefined
       }
 
+      const eslintBin = settings.eslintBin || 'eslint'
+
       if (nodePath !== undefined) {
-        promise = Files.resolve('eslint', nodePath, nodePath, trace).then<string, string>(undefined, () => {
-          return Files.resolve('eslint', resolvedGlobalPackageManagerPath, directory, trace);
+        promise = Files.resolve(eslintBin, nodePath, nodePath, trace).then<string, string>(undefined, () => {
+          return Files.resolve(eslintBin, resolvedGlobalPackageManagerPath, directory, trace);
         });
       } else {
-        promise = Files.resolve('eslint', resolvedGlobalPackageManagerPath, directory, trace);
+        promise = Files.resolve(eslintBin, resolvedGlobalPackageManagerPath, directory, trace);
       }
 
       return promise.then(path => {

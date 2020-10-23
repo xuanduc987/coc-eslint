@@ -39,6 +39,7 @@ In your vim/neovim run the following command:
 - `eslint.nodeEnv` - use this setting if an ESLint plugin or configuration needs `process.env.NODE_ENV` to be defined.
 - `eslint.autoFixOnSave` - enables auto fix on save.
 - `eslint.autoFixSkipRules` - rules that shouldn't be autofixed.
+- `eslint.eslintBin` - if you want to use eslint_d set this config to eslint_d
 - `eslint.nodePath` - use this setting if an installed ESLint package can't be detected. For example `/myGlobalNodePackages/node_modules`.
 - `eslint.filetypes` - an array of language identifiers specifying the files to be validated.
 - `eslint.codeAction.disableRuleComment` - object with properties:

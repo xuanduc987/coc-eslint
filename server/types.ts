@@ -129,6 +129,7 @@ export interface TextDocumentSettings {
   options: any | undefined
   run: RunValues
   nodePath: string | undefined
+  eslintBin: string | undefined
   workspaceFolder: WorkspaceFolder | undefined
   workingDirectory: DirectoryItem | undefined
   library: ESLintModule | undefined
